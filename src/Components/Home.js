@@ -11,7 +11,7 @@ export default function Home (props){
                     <img src={el.image} alt=""/>
                     <h3>${el.price}</h3>
                     <div>
-                        <button>Edit</button>
+                        <button onClick={() => props.history.push(`/edit/${el.id}`)}>Edit</button>
                         <button onClick={() => props.delete(el.id)}>Delete</button>
                     </div>
                 </div>

@@ -9,6 +9,8 @@ const {SERVER_PORT, CONNECTION_STRING} = process.env
 app.post('/api/products', ctrl.addProduct)
 app.get('/api/products', ctrl.getProducts)
 app.delete('/api/products/:id', ctrl.delete)
+app.get(`/api/product/:id`, ctrl.getOneProduct)
+app.put(`/api/products/:id`, ctrl.update)
 
 massive({
     connectionString: CONNECTION_STRING,
